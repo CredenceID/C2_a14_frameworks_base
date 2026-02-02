@@ -391,7 +391,7 @@ public final class BatteryService extends SystemService {
         if (mHealthInfo.batteryCapacityLevel != BatteryCapacityLevel.UNSUPPORTED) {
             return (mHealthInfo.batteryCapacityLevel == BatteryCapacityLevel.CRITICAL);
         }
-        if (mHealthInfo.batteryLevel > 0) {
+        if (mHealthInfo.batteryLevel > 5) {
             return false;
         }
 
