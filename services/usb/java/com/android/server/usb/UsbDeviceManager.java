@@ -1180,6 +1180,10 @@ public class UsbDeviceManager implements ActivityTaskManagerInternal.ScreenObser
                     Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 0);
 
 
+                    setSystemProperty(USB_PERSISTENT_CONFIG_PROPERTY, UsbManager.USB_FUNCTION_MTP);
+                    setEnabledFunctions(UsbManager.FUNCTION_MTP, false, operationId);
+                    mCurrentFunctions = UsbManager.FUNCTION_MTP;
+                    mScreenUnlockedFunctions = UsbManager.FUNCTION_MTP;
                     /* ---------------------------------------------- */
 
                     mNotificationManager = (NotificationManager)
