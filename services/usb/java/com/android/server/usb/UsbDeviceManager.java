@@ -1175,6 +1175,13 @@ public class UsbDeviceManager implements ActivityTaskManagerInternal.ScreenObser
                     break;
                 case MSG_SYSTEM_READY:
                     operationId = sUsbOperationCount.incrementAndGet();
+
+                    /* ---------------------------------------------- */
+                    Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 0);
+
+
+                    /* ---------------------------------------------- */
+
                     mNotificationManager = (NotificationManager)
                             mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
