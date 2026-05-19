@@ -346,6 +346,7 @@
 
     <!-- These are the packages that are white-listed to be able to run as system user -->
     <system-user-whitelisted-app package="com.credenceid.service" />
+    <system-user-whitelisted-app package="com.credence.credencemini" />
 
     <!-- Allow IMS service entitlement app to schedule jobs to run when app in background. -->
     <allow-in-power-save-except-idle package="com.android.imsserviceentitlement" />
